@@ -8,3 +8,7 @@ data_source retail:
     - https://www.googleapis.com/auth/drive
     project_id: 'airflow-dbt-pipeline'
     dataset: retail
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: a2850031-7616-45c2-9de6-7fc1598bbcf4
+  api_key_secret: 2mMjBwPbZul7uQtqcnIL_hq2fhPou-13zMu1f9HBMm61ekHYCvInWQ
