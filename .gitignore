@@ -11,3 +11,5 @@ airflow.cfg
 airflow.db
 service_account.json
 .DS_Store
+include/metabase-data/metabase.db/metabase.db.mv.db
+include/metabase-data/metabase.db/metabase.db.trace.db
