@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: retail
+    database: airflow-dbt-pipeline
+
+    tables:
+      - name: raw-invoices
+      - name: country
