@@ -1,4 +1,4 @@
-## Airflow-BigQuery-dbt Pipeline
+## Online Retail (Data Pipeline/Dashboard)
 
  An end-to-end pipeline that ingests raw data from CSV files through Apache Airflow DAGs (from a Docker Container) into a Google BigQuery analytical database. From there, it uses dbt to, firstly, normalize and clean the data and afterwards to make the necessary transformations and come up with relevant reports. At each step, quality checks are run using Soda, to ensure no data is corrupted, missing or duplicated. Finally, the reports are displayed in a dashboard so stakeholders are able to visualize the data and make informed data-driven decisions.
 
@@ -19,11 +19,18 @@ This is a transnational data set which contains all the transactions occurring b
 
 ### Data Modeling
 
+The data modeling resulted in three dimension tables (customers, products and datetime) and one fact table (invoices).
+
 <img width="718" alt="data_modeling" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/d418d417-ae0b-44a2-906c-ca468f91ec46">
 
 ### The Pipeline
 
+
 <img width="1509" alt="pipeline_" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/e5c959b7-57c7-4406-953f-a00015e6f80b">
+
+#### DAG
+
+<img width="1440" alt="dag_success" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/9159c9af-ffb3-4c01-8c66-83754ba7a110">
 
 ### Dashboard
 
