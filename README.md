@@ -1,7 +1,9 @@
-# Online Retail (Data Pipeline/Dashboard)
-### Python, SQL, Docker, DBT, Airflow, Git
+<h1>Online Retail (Data Pipeline/Dashboard)</h1> 
 
-This challenging and exciting personal project analysed online retail data from a non-registered UK-based company, by means of an ELT pipeline that ingested raw data from a CSV file and loaded the transformed data into a dashboard.
+#### - Python, SQL, Docker, DBT, Apache Airflow, BigQuery, Git
+<br>
+
+This challenging and exciting personal project analysed online retail data from a non-registered UK-based company, by means of an ELT pipeline that ingested and loaded raw data from a CSV file into a BigQuery warehouse before transforming it and loading into a dashboard.
 
 #### Extraction and Load
 
