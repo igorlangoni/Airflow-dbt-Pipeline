@@ -5,5 +5,5 @@ sources:
     database: airflow-dbt-pipeline
 
     tables:
-      - name: raw-invoices
+      - name: raw_invoices
       - name: country
