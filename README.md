@@ -1,13 +1,33 @@
-## Online Retail (Data Pipeline/Dashboard)
+# Online Retail (Data Pipeline/Dashboard)
+### Python, SQL, Docker, DBT, Airflow, Git
 
- An end-to-end pipeline that ingests raw data from CSV files through Apache Airflow DAGs (from a Docker Container) into a Google BigQuery analytical database. From there, it uses dbt to, firstly, normalize and clean the data and afterwards to make the necessary transformations and come up with relevant reports. At each step, quality checks are run using Soda, to ensure no data is corrupted, missing or duplicated. Finally, the reports are displayed in a dashboard so stakeholders are able to visualize the data and make informed data-driven decisions.
+This challenging and exciting personal project analysed online retail data from a non-registered UK-based company, by means of an ELT pipeline that ingested raw data from a CSV file and loaded the transformed data into a dashboard.
 
-In order to make the most out of Apache Airflow and to maximize efficiency, I have also used Astro CLI. Furthermore, as a means to integrate dbt and Airflow whilst gaining better visibility within my DAG I've utilized the Cosmos sdk.
+#### Extraction and Load
+
+After the dataset was downloaded from Kaggle, my first  Apache Airflow DAG task was to transfer the file from my local machine to a Google Cloud Bucket. From there, a second task created a BigQuery dataset and a third task loaded the file from the bucket into the dataset, creating the raw_invoices table.
+
+The extraction and load phases were technically complete, but in order to guarantee the quality of the data I implemented Soda checks to ensure all the columns were present and that datatypes were kept as they were supposed to be. 
+
+#### Transform
+
+All the transformations were made by using SQL queries in DBT and the Cosmos SDK. It was useful in the sense that it gave visibility to the tasks when looking at them in the Airflow DAG interface. 
+
+The first step was to transform the data in the analytical db and come up with dimension and fact tables. Those would later be used to make reports. Through the use of complex SQL queries the customer, product, datetime and invoices tables were created.
+
+Again, after the previous step was finished, I implemented checks to ensure the results were not corrupted or missing any information.
+
+The second transformation step was to create reports, those being a derivation of the models previously created. The reports I created answered question such as 'best-selling product by quantity sold', 'best-selling month by total revenue', and 'primary markets by total revenue'.
+
+A final round of checks were run at this point to atest the quality of the reports. <br><br>
+
+
+
 
 This project was based on <a href="https://www.youtube.com/watch?v=DzxtCxi4YaA&ab_channel=DatawithMarc">Data Engineer Project</a> by <a href="https://www.youtube.com/@MarcLamberti">Marc Lamberti</a>. 
 
 
-### The Dataset
+## The Dataset
 
 https://www.kaggle.com/datasets/tunguz/online-retail
 
@@ -17,13 +37,13 @@ Dr Daqing Chen, Director: Public Analytics group. chend '@' lsbu.ac.uk, School o
 **Data Set Information:**
 This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
 
-### Data Modeling
+## Data Modeling
 
 The data modeling resulted in three dimension tables (customers, products and datetime) and one fact table (invoices).
 
 <img width="718" alt="data_modeling" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/d418d417-ae0b-44a2-906c-ca468f91ec46">
 
-### The Pipeline
+## The Pipeline
 
 
 <img width="1509" alt="pipeline_" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/e5c959b7-57c7-4406-953f-a00015e6f80b">
@@ -32,7 +52,7 @@ The data modeling resulted in three dimension tables (customers, products and da
 
 <img width="1440" alt="dag_success" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/9159c9af-ffb3-4c01-8c66-83754ba7a110">
 
-### Dashboard
+## Dashboard
 
 <img width="1440" alt="retail_dashboard" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/313f4d77-87a6-43cb-b914-f7d8dbf52039">
 
