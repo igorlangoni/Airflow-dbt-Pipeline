@@ -56,7 +56,7 @@ The data modeling resulted in three dimension tables (customers, products and da
 
 ## Dashboard
 
-<img width="1440" alt="retail_dashboard" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/313f4d77-87a6-43cb-b914-f7d8dbf52039">
 
+<img width="1920" alt="online_retail_dash" src="https://github.com/igorlangoni/online_retail_data_pipeline/assets/123383171/6f8904ca-8548-4dc0-9a3e-b02c5903af37">
 
 
