@@ -25,7 +25,6 @@ A final round of checks were run at this point to atest the quality of the repor
 
 
 
-
 This project was based on <a href="https://www.youtube.com/watch?v=DzxtCxi4YaA&ab_channel=DatawithMarc">Data Engineer Project</a> by <a href="https://www.youtube.com/@MarcLamberti">Marc Lamberti</a>!!
 
 
@@ -46,7 +45,6 @@ The data modeling resulted in three dimension tables (customers, products and da
 <img width="718" alt="data_modeling" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/d418d417-ae0b-44a2-906c-ca468f91ec46">
 
 ## The Pipeline
-
 
 <img width="1509" alt="pipeline_" src="https://github.com/igorlangoni/Airflow-dbt-Pipeline/assets/123383171/e5c959b7-57c7-4406-953f-a00015e6f80b">
 
